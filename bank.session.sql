@@ -19,7 +19,7 @@ CREATE TABLE akun(
     email varchar(255) not null,
     no_rekening integer not null,
     saldo integer not null,
-    id_nasabah integer not null references nasabah(id_nasabah)
+    id_nasabah integer not null
 );
 
 CREATE TABLE transaksi(
@@ -29,7 +29,7 @@ CREATE TABLE transaksi(
     nominal_transaksi bigint not null,
     rekening_tujuan bigint not null,
     keterangan varchar(255),
-    id_akun integer not null references akun(id_akun)
+    id_akun integer not null
 );
 
 -- insert data
